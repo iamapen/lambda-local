@@ -1,0 +1,4 @@
+/.idea/
+/*.iml
+/docker/volumes/localstack/
+!/docker/volumes/localstack/.gitkeep
