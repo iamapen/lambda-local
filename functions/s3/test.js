@@ -1,4 +1,5 @@
-import {handler} from './index.mjs';
+import {invoke} from "./usecase.mjs";
+import {S3Client} from "@aws-sdk/client-s3";
 
 const event = {
   "Records": [
@@ -38,7 +39,15 @@ const event = {
     }
   ]
 };
-handler(event).then(response => {
+const s3Client = new S3Client({
+  endpoint: "http://localhost:4566",
+  credentials: {
+    accessKeyId: 'dummy',
+    secretAccessKey: 'dummy'
+  }
+});
+
+invoke(event, s3Client).then(response => {
   console.log(response);
 }).catch(err => {
   console.error(err);

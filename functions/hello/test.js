@@ -1,3 +1,7 @@
+/**
+ * ローカルデバッグ用
+ * 本気でやるならjestなどを使ったほうがいい
+ */
 import {handler} from './index.mjs';
 
 const event = {};
