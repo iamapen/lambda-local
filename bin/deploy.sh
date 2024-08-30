@@ -2,7 +2,8 @@
 
 ####
 # func01 という名前で Lambda関数を上書きデプロイして、実行するスクリプト
-#
+# SAM(CloudFormation) を使わないライトなもの
+###
 
 echo 'archiving...'
 zip function.zip *.mjs

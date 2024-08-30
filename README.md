@@ -12,10 +12,17 @@ https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/getting-started-install.h
 ## 以下になるよう入力
 AWS Access Key ID [None]: dummy
 AWS Secret Access Key [None]: dummy
-Default region name [None]: ap-northeast-1
+Default region name [None]: us-east-1
 ```
 
 # lambda
+## 簡易デプロイスクリプト
+アーカイブ、デプロイ、実行までを行うスクリプト
+```bash
+cd /PATH/TO/function-dir
+/PATH/TO/bin/deploy.sh
+```
+
 ## 関数を実行
 ```bash
 aws lambda invoke --profile localstack --endpoint-url http://localhost:4566 \
