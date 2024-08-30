@@ -1,4 +1,4 @@
-const {handler} = require('./index');
+import {handler} from './index.mjs';
 
 const event = {};
 handler(event).then(response => {

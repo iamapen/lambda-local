@@ -1,4 +1,4 @@
-const {handler} = require('./index.js');
+import {handler} from './index.mjs';
 
 const event = {
   "Records": [

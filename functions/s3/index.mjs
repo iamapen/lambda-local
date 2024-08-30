@@ -1,13 +1,14 @@
-const {S3Client, ListBucketsCommand} = require("@aws-sdk/client-s3");
+import {ListBucketsCommand, S3Client} from '@aws-sdk/client-s3';
 
 /**
  * S3バケットを一覧する
  * @param event
  * @returns {Promise<{body: string, statusCode: number}>}
  */
-exports.handler = async (event) => {
+export const handler = async (event) => {
+  console.log('start');
+
   const s3Client = new S3Client({
-    region: "ap-northeast-1",
     endpoint: "http://localhost:4566",
     credentials: {
       accessKeyId: 'dummy',
