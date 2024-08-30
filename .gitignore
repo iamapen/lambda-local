@@ -2,3 +2,4 @@
 /*.iml
 /docker/volumes/localstack/
 !/docker/volumes/localstack/.gitkeep
+/node_modules/
